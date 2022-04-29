@@ -1,0 +1,5 @@
+package com.mjava.dao;
+
+public class OrderDao {
+
+}
