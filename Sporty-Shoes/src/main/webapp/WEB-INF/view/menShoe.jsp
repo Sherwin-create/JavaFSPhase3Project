@@ -4,24 +4,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+	h2 {
+		text-align:center;
+		color: #0091ea;
+	}
+</style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 
 <body>
-<%@include file="homeHeader.jsp" %>
-	<h2>Men's Shoes</h2>
-<table>
+<h2>Men's Shoes</h2>
+	<table>
  
-<c:forEach items="${menshoeData}" var="fss">
-<tr>
-<td><span>
+		<c:forEach items="${menshoeData}" var="fss">
+		<tr>
+			<td>
               <a href="selectedShoe?id=<c:out value='${fss.id}' />">
-                <img src="${fss.imagelink}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+              <%--   <img src="${fss.imagelink}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"> --%>
               <br><br><label >INR ${fss.price} </label> <br> <label>${fss.name}</label> 
                    
             </a>
-            </span>
             </td>
  
 </tr>
