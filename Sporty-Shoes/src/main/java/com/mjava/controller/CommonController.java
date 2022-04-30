@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.mjava.model.OrderedShoeModel;
 import com.mjava.model.ShoesDataModel;
@@ -42,8 +43,8 @@ public class CommonController {
 	public String menShoesForm(ModelMap model) {
 		List<ShoesDataModel> mensData = shoeservice.getMensShoeData();
 		model.put("menshoeData", mensData);
-
-		return "menShoesForm";
+		System.out.println(model);
+		return "menShoe";
 	}
 
 	@RequestMapping(value = "/womenshoes", method = RequestMethod.GET)
@@ -166,7 +167,7 @@ public class CommonController {
 				List<ShoesDataModel> mensData = shoeservice.getMensShoeData();
 
 				model.put("men_women_kids_ShoeDataname", mensData);
-				model.put("username", username.toUpperCase());
+				model.put("username", username);
 				model.put("password", password);
 				return "adminForm";
 

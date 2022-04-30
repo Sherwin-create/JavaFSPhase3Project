@@ -9,7 +9,8 @@
 <title>Mens Shoes</title>
 </head>
 <body>
-<%@include file="homeHeader.jsp" %>
+<h1>please work</h1>
+ <%-- <%@include file="homeHeader.jsp" %> --%>
 <h2>Men's Shoes</h2>
 <table>
  
@@ -27,6 +28,6 @@
 </tr>
  </c:forEach>
  
-</table>
+</table> 
 </body>
 </html>
