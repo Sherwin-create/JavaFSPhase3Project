@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url("images/pexels-andrea-piacquadio-3756165.jpg");
+		
+		background-size: cover;
+		opacity: 0.6;
+	}
+	
+	
+.center {
+  padding: 50% 0 50%;
+  background: #999FF0;
+  }
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="center">
+	<a href="signin" style="text-decoration:none;color:black">SignIn</a>
+	<a href="signup" style="text-decoration:none;color:black">SignUp</a>
+</div>
+</body>
+</html>

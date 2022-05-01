@@ -5,9 +5,10 @@
 <html>
 <head>
 <style type="text/css">
-	h2 {
-		text-align:center;
+	h1 {
 		color: #0091ea;
+		text-align: center;
+		
 	}
 </style>
 <meta charset="UTF-8">
@@ -15,20 +16,29 @@
 </head>
 
 <body>
-<h2>Men's Shoes</h2>
-	<table>
- 
+<h1>Men's Shoes</h1>
+
+	<table border="1px" align="center">
+ 		
 		<c:forEach items="${menshoeData}" var="fss">
+		
 		<tr>
 			<td>
               <a href="selectedShoe?id=<c:out value='${fss.id}' />">
-              <%--   <img src="${fss.imagelink}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"> --%>
-              <br><br><label >INR ${fss.price} </label> <br> <label>${fss.name}</label> 
+             <img src="${fss.imagelink}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">  
+              <label>${fss.name}</label>
                    
             </a>
             </td>
- 
-</tr>
+            <td>
+             <a href="selectedShoe?id=<c:out value='${fss.id}' />">
+            	<label >INR ${fss.price} </label>
+            </a>
+            </td>
+		</tr>
+		<tr>
+			
+		</tr>
  </c:forEach>
  
 </table>

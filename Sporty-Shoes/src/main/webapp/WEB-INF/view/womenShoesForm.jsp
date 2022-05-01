@@ -6,6 +6,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<style type="text/css">
+	body {
+	background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+	}
+</style>
 <title>Women Shoes</title>
 </head>
 <body>

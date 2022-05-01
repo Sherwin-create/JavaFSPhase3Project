@@ -3,6 +3,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+	body {
+		background-image: url("images/pexels-miguel-á-padriñán-255379.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		align-content: center;
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
 <meta charset="ISO-8859-1">
 <title>Sign Up</title>
 </head>

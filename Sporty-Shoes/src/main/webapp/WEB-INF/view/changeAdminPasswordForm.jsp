@@ -12,9 +12,9 @@
   
       <form name="changeform" action="changeadminPassword" onsubmit="return changePasswordvalidateForm()">
       <b>Change Admin password   </b><br><br>
-       Current Password : <input  type="text" name="currentpassword" ><br><br>
-      New Password : <input  type="text" name="newpassword" ><br><br>
-      Confirm Password : <input  type="text" name="confirmpassword" ><br><br>
+       Current Password : <input  type="password" name="currentpassword" ><br><br>
+      New Password : <input  type="password" name="newpassword" ><br><br>
+      Confirm Password : <input  type="password" name="confirmpassword" ><br><br>
       <input type="submit" value="ChangePassword">
       </form>
 </body>

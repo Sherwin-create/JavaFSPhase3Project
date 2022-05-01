@@ -11,9 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -34,6 +36,11 @@ public class CommonController {
 	@Autowired
 	private UsersService userservice;
 	
+	@RequestMapping(value="/")
+	public String form() {
+		return "home";
+	}
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homeForm() {
 		return "index";
@@ -46,6 +53,7 @@ public class CommonController {
 		System.out.println(model);
 		return "menShoe";
 	}
+
 
 	@RequestMapping(value = "/womenshoes", method = RequestMethod.GET)
 	public String womenMethod(ModelMap model) {
@@ -69,7 +77,7 @@ public class CommonController {
 		return "signinForm";
 	}
 
-	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public String sigUpMethod() {
 		return "signUpForm";
 	}
@@ -149,7 +157,7 @@ public class CommonController {
 		}
 	}
 
-	@GetMapping("/adminsignin")
+	@PostMapping("/adminsignin")
 	public String adminSigninMethod(ModelMap model, @RequestParam String username, @RequestParam String password) {
 
 		int rollid = 0;
@@ -174,7 +182,7 @@ public class CommonController {
 			} else if (rollid == 2) {
 				model.put("username", username);
 				model.put("password", password);
-				return "index";
+				return "userSignIn";
 			} else if (rollid == 0) {
 				model.put("errorMessage", "Invalid Credentials");
 				return "signinForm";
@@ -197,9 +205,8 @@ public class CommonController {
 
 		try {
 			List<ShoesDataModel> mensData = shoeservice.getMensShoeData();
-
 			model.put("men_women_kids_ShoeDataname", mensData);
-
+		
 			return "adminForm";
 
 		} catch (Exception e) {
