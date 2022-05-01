@@ -77,7 +77,7 @@ public class CommonController {
 		return "signinForm";
 	}
 
-	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	@GetMapping("/signup")
 	public String sigUpMethod() {
 		return "signUpForm";
 	}
